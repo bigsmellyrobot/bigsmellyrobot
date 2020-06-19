@@ -1,5 +1,5 @@
 <template lang="pug">
-.font-sans.text-white.bg-grey-darkest.min-h-screen.pb-8
+.main-body.font-sans.min-h-screen.pb-8
   site-header
   nuxt
 </template>
@@ -14,12 +14,30 @@ export default {
 }
 </script>
 
-<style lang="sass">
-body
-  max-width: 100vw
-  overflow-x: hidden
-.text-justify p:not(:first-child)
+<style lang="scss">
+@import 'assets/css/settings.scss';
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: $white2;
+}
+.main-body {
+  &, a {
+    color: $gray;
+  }
+
+  .gray-95 {
+    background: $white-95;
+  }
+
+  .nav-btn {
+    border-color: $gray;
+  }
+}
+.text-justify p:not(:first-child) {
   text-indent: 2rem
-a
+}
+a {
   transition: color .25s, border-width .25s
+}
 </style>

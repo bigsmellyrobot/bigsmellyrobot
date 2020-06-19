@@ -1,5 +1,5 @@
 <template lang="pug">
-.font-sans.text-white.min-h-screen
+.main-body.font-sans.min-h-screen
   site-header
   main.p-2.pt-16.max-w-sm
     header.mb-8
@@ -20,9 +20,12 @@ export default {
 }
 </script>
 
-<style lang="sass">
-body
-  max-width: 100vw
-  overflow-x: hidden
-  background: #000 url('/images/404.jpg') no-repeat left bottom
+<style lang="scss" scoped>
+@import 'assets/css/settings.scss';
+.main-body {
+  background: #000 url('/images/404.jpg') no-repeat left bottom;
+  &, a {
+    color: $white;
+  }
+}
 </style>
